@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import Weather from '../components/Weather'
+import { FormEvent } from 'react';
 
 export default function Home() {
   const [city, setCity] = useState('');
@@ -11,7 +12,7 @@ export default function Home() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=66819514e9d11c3cd77b4f0270a94f41&units=metric`
 
-  const fetchInfo = (e) => {
+  const fetchInfo = (e: FormEvent) => {
     e.preventDefault();
     axios.get(url).then((response) => {
       setWeather(response.data);
@@ -22,8 +23,8 @@ export default function Home() {
     setCity('');
   }
 
-  const handleChange = (e) => {
-    setCity(e.target.value);
+  const handleChange = (e: FormEvent<HTMLInputElement>) => {
+    setCity(e.currentTarget.value);
     // console.log(e.target.value);
   }
 
