@@ -29,19 +29,19 @@ export default function Home() {
   }
 
   return (
-    <div className='bg-slate-800'>
+    <div className=''>
 
       {/* Overlay */}
-      <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] bg-black/40" />
+      <div className="absolute top-0 bottom-0 left-0 right-0 z-[1]" />
 
       {/* Image */}
-      <Image src="/photo.avif"
-        alt="background_img" layout='fill' className='relative top-0 bottom-0 left-0 right-0' />
+      {/* <Image src="/photo.avif"
+        alt="background_img" layout='fill' className='relative top-0 bottom-0 left-0 right-0' /> */}
 
       {/* City Entry form */}
-      <div className='relative flex justify-between items-center w-11/12 md:max-w-[500px] m-auto pt-6 text-white z-10'>
+      <div className='relative flex justify-between items-center w-10/12 md:max-w-[500px] m-auto pt-6 text-white z-10'>
         <form onSubmit={fetchInfo} 
-        className='flex justify-between items-center w-full m-auto p-3 border border-gray-300 text-white rounded-[10px]'>
+        className='flex justify-between items-center w-full m-auto p-3 border-white border-2 text-white rounded-[10px]'>
           <input className='bg-transparent border-none focus:outline-none text-white font-bold'
             type='text'
             placeholder='Search Weather...'

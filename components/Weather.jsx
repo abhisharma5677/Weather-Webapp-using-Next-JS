@@ -29,7 +29,7 @@ const Weather = ({ data }) => {
   if (cityName === "") {
     return (
       <div className='text-center'>
-        <div className='relative z-10 text-[100px] w-11/12 text-white mt-[150px] md:mt-[250px]'>Get weather details... </div>
+        <div className='relative text-[80px] w-11/12 text-white mt-[150px] md:mt-[250px]'>Get weather details... </div>
       </div>
     )
   }
