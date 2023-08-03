@@ -29,7 +29,7 @@ const Weather = ({ data }) => {
   if (cityName === "") {
     return (
       <div className='text-center'>
-        <div className='relative z-10 text-[100px] text-white mt-[250px]'>Get weather details... </div>
+        <div className='relative z-10 text-[100px] w-11/12 text-white mt-[150px] md:mt-[250px]'>Get weather details... </div>
       </div>
     )
   }
@@ -41,10 +41,10 @@ const Weather = ({ data }) => {
           {/* weather condition and tempreture in degree celcious */}
           <div className='md:flex md:justify-center md:items-center'>
             <div className='flex justify-center'>
-              <h1 className='md:text-[120px] text-[50px] font-bold text-white '>{weatherCondition}</h1>
+              <h1 className='border w-4/5 text-center box-border border-none md:text-[120px] text-[50px] font-bold text-white '>{weatherCondition}</h1>
             </div>
             <div className='flex justify-center'>
-              <h1 className='md:text-[120px] text-[90px] text-white font-bold flex relative md:left-[100px]'>
+              <h1 className='border w-11/12 text-center box-border border-none md:text-[120px] text-[90px] text-white font-bold flex relative md:left-[100px]'>
                 {tempreture}
                 <TbTemperatureCelsius size={115} className="text-white relative top-[10px] md:relative md:top-[12px] md:h-[150px] md:w-auto" />
               </h1>

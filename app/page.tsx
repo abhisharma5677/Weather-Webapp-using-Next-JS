@@ -36,10 +36,10 @@ export default function Home() {
 
       {/* Image */}
       <Image src="/photo.avif"
-        alt="background_img" layout='fill' className='object-cover mb-0' />
+        alt="background_img" layout='fill' className='relative top-0 bottom-0 left-0 right-0' />
 
       {/* City Entry form */}
-      <div className='relative flex justify-between items-center max-w-[380px] md:max-w-[500px] w-full m-auto pt-6 text-white z-10'>
+      <div className='relative flex justify-between items-center w-11/12 md:max-w-[500px] m-auto pt-6 text-white z-10'>
         <form onSubmit={fetchInfo} 
         className='flex justify-between items-center w-full m-auto p-3 border border-gray-300 text-white rounded-[10px]'>
           <input className='bg-transparent border-none focus:outline-none text-white font-bold'
