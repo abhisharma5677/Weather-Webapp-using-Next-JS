@@ -28,8 +28,10 @@ const Weather = ({ data }) => {
 
   if (cityName === "") {
     return (
-      <div className='text-center'>
-        <div className='relative text-[80px] w-11/12 text-white mt-[150px] md:mt-[250px]'>Get weather details... </div>
+      <div className='flex justify-center'>
+        <div className='relative text-[80px] border border-none w-10/12 text-center text-white mt-[150px] md:mt-[250px]'>
+          Get weather details...
+        </div>
       </div>
     )
   }
@@ -37,14 +39,14 @@ const Weather = ({ data }) => {
     return (
       <div className='flex justify-center md:mt-20 mt-[30px] '>
         <div className='relative z-20'>
-          
+
           {/* weather condition and tempreture in degree celcious */}
           <div className='md:flex md:justify-center md:items-center'>
             <div className='flex justify-center'>
               <h1 className='border w-4/5 text-center box-border border-none md:text-[120px] text-[50px] font-bold text-white '>{weatherCondition}</h1>
             </div>
             <div className='flex justify-center'>
-              <h1 className='border w-11/12 text-center box-border border-none md:text-[120px] text-[90px] text-white font-bold flex relative md:left-[100px]'>
+              <h1 className='border w-10/12 text-center box-border border-none md:text-[120px] text-[90px] text-white font-bold flex relative md:left-[100px]'>
                 {tempreture}
                 <TbTemperatureCelsius size={115} className="text-white relative top-[10px] md:relative md:top-[12px] md:h-[150px] md:w-auto" />
               </h1>
@@ -61,7 +63,7 @@ const Weather = ({ data }) => {
                   Weather in {cityName}
                 </h1>
               </div>
-              
+
               {/* gird and flex below city name code */}
               <div className='grid grid-cols-2 gap-y-[40px] gap-x-[30px] mt-[30px] pl-[30px] pb-[30px] md:flex md:justify-evenly md:mt-[80px] md:pb-[30px]'>
                 <p className='border border-none rounded-[5px] w-[120px] h-[120px]  text-white font-semibold text-center text-[20px]'>
@@ -74,7 +76,7 @@ const Weather = ({ data }) => {
                   <WiHumidity size={60} className='relative left-[25px]' />
                   <p>{humidity}%</p>
                   <p>Humidity</p>
-                </p> 
+                </p>
 
 
                 <p className='border border-none rounded-[5px] w-[120px] h-[120px]  text-white font-semibold text-center text-[20px]'>
